@@ -1,0 +1,18 @@
+[user]
+	name = Justina
+	email = justina.chua@shopify.com
+[include]
+	path = /Users/justinachua/.config/dev/gitconfig
+[alias]
+	push-this = push -u origin HEAD
+	push-this-fwl = push -u origin --force-with-lease
+	cm = checkout main
+	c- = checkout -
+	dms = diff main --stat
+	rbm = rebase main
+	rbim = rebase -i main
+	com-no-e = commit --amend --no-edit
+	co = checkout
+	br = branch
+	st = status
+	rb = rebase
