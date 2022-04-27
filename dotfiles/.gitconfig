@@ -16,3 +16,5 @@
 	br = branch
 	st = status
 	rb = rebase
+[init]
+	defaultBranch = main
