@@ -87,3 +87,5 @@ if [[ $SPIN ]]; then
   git config --global user.name "Justina Chua"
   git config --global --unset-all credential.helper
 fi
+
+exit 0
