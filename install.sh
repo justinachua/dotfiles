@@ -74,6 +74,14 @@ else
   echo "You don't have anything in '$DOTFILEDIR'"
 fi
 
+if [ -f /etc/zsh/zshrc.default.inc.zsh ]; then
+  # assume that this default file will load our .zshrc.d/* files
+  rsync -avh /etc/zsh/zshrc.default.inc.zsh "${HOME}/.zshrc"
+else
+  # if this replaces an existing config, check $HOME/.zshrc.pre-oh-my-zsh
+  rsync -avh .zshrc "${HOME}/.zshrc"
+fi
+
 if [[ $SPIN ]]; then
   git config --global user.email "justina.chua@shopify.com"
   git config --global user.name "Justina Chua"
